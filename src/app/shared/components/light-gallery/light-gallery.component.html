@@ -1,0 +1,7 @@
+<lightgallery [settings]="settings" [onBeforeSlide]="onBeforeSlide">
+  @for (photo of photos; track photo) {
+    <a [href]="photo.data">
+      <img class="gallery-photo" alt="" [src]="photo.data"/>
+    </a>
+  }
+</lightgallery>

@@ -1,0 +1,14 @@
+.section {
+  margin: 2rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1250px;
+  gap: 16px;
+}
+
+@media (max-width: 1250px) {
+  .section {
+    width: 100%;
+    justify-content: center;
+  }
+}

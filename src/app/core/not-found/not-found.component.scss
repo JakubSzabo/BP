@@ -1,0 +1,29 @@
+.not-found {
+  position: relative;
+  height: 100vh;
+  font-size: 3rem;
+
+  h1 {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .icon {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 830px) {
+  .not-found {
+    h1 {
+      font-size: 2rem;
+    }
+    .icon {
+      font-size: 2rem;
+    }
+  }
+}

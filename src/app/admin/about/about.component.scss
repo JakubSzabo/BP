@@ -1,0 +1,55 @@
+.input {
+  width: 250px;
+}
+
+.card {
+  margin-top: 0.5rem;
+}
+
+.map {
+  margin-top: .5rem;
+  font-size: 1.3rem;
+}
+
+.save {
+  display: flex;
+  justify-content: end;
+}
+
+.file-select {
+  display: flex;
+  justify-content: start;
+}
+
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  .photo-container {
+    position: relative;
+    display: inline-block;
+
+    img {
+      display: block;
+      max-width: 300px;
+      height: auto;
+    }
+
+    .delete-button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.8);
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      border-radius: 50%;
+      transform: translate(50%, -50%);
+
+      i {
+        color: #f00;
+      }
+    }
+  }
+}

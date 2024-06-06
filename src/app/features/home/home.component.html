@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="p-relative section-1">
+    <img src="assets/images/internat.svg" alt="Internat">
+
+    <h2 class="p-absolute title-1">Máš problém?</h2>
+    <h2 class="p-absolute title-2">Potrebuješ pomoc?</h2>
+    <h2 class="p-absolute title-3">Hladáš niečo na internáte?</h2>
+  </div>
+
+  <div class="section-2">
+    @for (article of articles; track article.id) {
+      <app-info-table
+        [id]="article.id!"
+        [title]="article.title"
+        [text]='article.text ?? ""'
+        [image]="article.image ?? 'assets/images/internat.svg'"
+        [open]="article.open ?? false"
+        (click)="article.open = !article.open"
+      >
+      </app-info-table>
+    }
+  </div>
+
+  <div class="section-3">
+    <div class="about">
+      <div class="text">
+        <h1>Rada ubytovaných študentov</h1>
+        <p>{{ firstText }}</p>
+      </div>
+      <img [src]="firstImg" alt="">
+    </div>
+    <div class="about">
+      <img [src]="secondImg" alt="">
+      <div class="text">
+        <p>{{ secondText }}</p>
+      </div>
+    </div>
+  </div>
+</div>

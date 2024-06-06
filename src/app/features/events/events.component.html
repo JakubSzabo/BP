@@ -1,0 +1,12 @@
+<div class="container section">
+  @for (article of articles; track article.id) {
+    <app-info-table
+      [id]="article.id!"
+      [title]="article.title"
+      [text]='article.text ?? ""'
+      [image]="article.image ?? 'assets/images/internat.svg'"
+      [open]="article.open ?? false"
+      (click)="article.open = !article.open"
+    ></app-info-table>
+  }
+</div>

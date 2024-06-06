@@ -1,0 +1,35 @@
+.form {
+  .section {
+    margin-top: 1rem;
+  }
+
+  .last-section {
+    margin-bottom: 2rem;
+  }
+
+  .date-picker {
+    margin-left: 0.6rem;
+  }
+
+  .members {
+    .member-box {
+      font-size: 1.3rem;
+      margin-left: 0.4rem;
+    }
+  }
+
+  .card {
+    margin-top: 1rem;
+  }
+
+  button {
+    border: 0;
+    background-color: transparent;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    padding: 0.2rem;
+  }
+}
+
+
+

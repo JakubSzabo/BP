@@ -1,0 +1,126 @@
+.bg .sections .section {
+  z-index: 99;
+}
+
+.bg {
+  background-color: #231f20;
+
+  .sections {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+
+    .sponsors {
+
+      .sponsor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .sponsor-two {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .sponsor-two img {
+        width: 100px;
+        height: auto;
+        margin: 1rem;
+      }
+    }
+  }
+
+  img {
+    width: 100px;
+    display: block;
+    padding-bottom: 2rem;
+  }
+
+  .section {
+    display: inline-block;
+    text-align: center;
+    color: white;
+    width: 33%;
+    height: 100%;
+    padding: 1.5rem 0;
+
+    h2 {
+      font-size: 2.2rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    h2, h3 {
+      padding: 0.5rem;
+      font-weight: normal;
+    }
+
+    a {
+      color: white;
+
+      i {
+        padding: 0 0.5rem;
+        font-size: 1.7rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 930px) {
+  .bg .sections .section {
+    z-index: 99;
+  }
+  .bg .sections {
+    position: relative; /* Ensure the container has a positioning context */
+  }
+
+  .bg {
+    display: block;
+
+    .sections {
+      display: block;
+
+      .sponsor {
+        flex-direction: row !important;
+        justify-content: center;
+      }
+
+      img {
+        margin: 1rem;
+      }
+
+      .section {
+        display: block;
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  .bg {
+    .sections {
+      .sponsor {
+        flex-direction: column !important;
+        justify-content: center;
+      }
+
+      img {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.sponsor-main {
+  img {
+    width: 48px!important;
+    height: auto;
+  }
+}

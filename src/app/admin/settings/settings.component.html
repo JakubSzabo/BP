@@ -1,0 +1,75 @@
+<div class="container">
+  <h1 class="text-center pt-1">
+    Členovia
+    <button class="add-button" (click)="showDialog()"><i class="pi pi-plus-circle" style="font-size: 1.5rem"></i></button>
+  </h1>
+  <div class="card">
+    <p-table [value]="members" [tableStyle]="{ 'min-width': '50rem' }">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Meno</th>
+          <th>Izba</th>
+          <th>Číslo</th>
+          <th>Rola</th>
+          <th>Action</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-member>
+        <tr>
+          <td>{{ member.name }}</td>
+          <td>{{ member.room }}</td>
+          <td>{{ member.phoneNumber }}</td>
+          <td>{{ getRole(member.role) }}</td>
+          <td class="actions">
+            <button (click)="getMember(member.id)"><i class="pi pi-pencil" style="font-size: 1rem"></i></button>
+            <button (click)="deleteMember(member.id)"><i class="pi pi-trash" style="font-size: 1rem"></i></button>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+
+  <div class="about mt-2">
+    <h1 class="text-center pt-1">O RUŠ</h1>
+    <div>
+      <textarea class="text" rows="8" [(ngModel)]="firstText"></textarea>
+      <input class="photo" type="file" (change)="onFileSelected($event, true)" accept="image/*"/>
+    </div>
+    <div>
+      <textarea class="text" rows="8" [(ngModel)]="secondText"></textarea>
+      <input class="photo" type="file" (change)="onFileSelected($event, false)" accept="image/*"/>
+    </div>
+    <div class="text-center">
+      <button class="button confirm-button" (click)="saveAbout()">Uložiť zmeny</button>
+    </div>
+  </div>
+
+  <div class="card flex justify-content-center">
+    <p-dialog header="Pridať člena" [(visible)]="visible" class="dialog-container">
+      <div class="form-container">
+        <div class="form-group">
+          <label for="name" class="label">Meno:</label>
+          <input id="name" class="input" type="text" pInputText [(ngModel)]="name" />
+        </div>
+        <div class="form-group">
+          <label for="room" class="label">Izba:</label>
+          <input id="room" class="input" type="text" pInputText [(ngModel)]="room" />
+        </div>
+        <div class="form-group">
+          <label for="phoneNumber" class="label">Telefonne číslo:</label>
+          <input id="phoneNumber" class="input" type="text" pInputText [(ngModel)]="phoneNumber" />
+        </div>
+        <div class="form-group">
+          <label for="role" class="label">Rola:</label>
+          <select id="role" class="input select" [(ngModel)]="selectedRole">
+            @for (role of roles; track role.code) {
+              <option [value]="role.code">{{ role.name }}</option>
+            }
+          </select>
+        </div>
+        <button (click)="createOrUpdateMember()" class="button confirm-button">Uložiť</button>
+      </div>
+    </p-dialog>
+  </div>
+</div>
+<p-toast></p-toast>

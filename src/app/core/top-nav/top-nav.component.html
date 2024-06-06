@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="card flex justify-content-center">
+    <p-sidebar [(visible)]="sidebarVisible" position="left" class="side-bar">
+      <ul class="side-nav-items">
+        @for (link of links; track link.link) {
+          <li class="side-nav-item"><a [routerLink]="link.link">{{ link.label }}</a></li>
+        }
+      </ul>
+    </p-sidebar>
+  </div>
+
+  <ul class="nav-bar">
+    <div class="nav-logo">
+      <img src="./assets/images/rus_logo.svg" alt="">
+    </div>
+    <div class="nav-items">
+      @for (link of links; track link.link) {
+        <li class="nav-item"><a [routerLink]="link.link">{{ link.label }}</a></li>
+      }
+      <li class="nav-item">jazyk</li>
+    </div>
+    <p-button (click)="sidebarVisible = true" class="nav-burger"><i class="pi pi-align-justify"></i></p-button>
+  </ul>
+</div>

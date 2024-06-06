@@ -1,0 +1,43 @@
+<div class="container form">
+  <div>
+    <label>Max počet odpovedí:</label>
+    <input [(ngModel)]="max" type="number">
+  </div>
+  <div>
+    <label>Uzatvorenie formulára:</label>
+    <input [(ngModel)]="date" type="date">
+  </div>
+  @for (field of form; track field) {
+  <div>
+      <div>
+        <label>Typ poľa:</label>
+        <select [(ngModel)]="field.fieldType">
+          <option value="input">Input</option>
+          <option value="checkbox">Checkbox</option>
+          <option value="radiobox">Radiobox</option>
+        </select>
+      </div>
+      @if (field.fieldType === 'input') {
+        <div>
+          <label>Typ vstupu:</label>
+          <select [(ngModel)]="field.inputType">
+            <option value="text">Text</option>
+            <option value="number">Number</option>
+            <option value="email">Email</option>
+          </select>
+        </div>
+      }
+      <div>
+        <label>Názov štítku:</label>
+        <input [(ngModel)]="field.fieldName" type="text">
+      </div>
+      <div>
+        <label>Povinné:</label>
+        <input [(ngModel)]="field.requiredField" type="checkbox">
+      </div>
+      <button class="button danger-button" type="button" (click)="deleteField($index)">Delete</button>
+  </div>
+  }
+  <button class="button normal-button" type="button" (click)="addField()">Add Input</button>
+  <button class="button confirm-button" (click)="saveForm()">Save</button>
+</div>

@@ -1,0 +1,79 @@
+<div class="container">
+  <h1 class="text-center pt-1">O internáte</h1>
+  <div>
+    <input class="input" type="text" pInputText [(ngModel)]="title" placeholder="Nadpis"/>
+
+    <div class="card">
+      <st-editor [(ngModel)]="text"></st-editor>
+    </div>
+
+    <div class="map">
+      <label for="map">Mapa: </label>
+      <input id="map" type="file" (change)="onMapSelected($event)" accept="image/*"/>
+    </div>
+
+    <div class="save">
+      <button class="button confirm-button" (click)="saveAbout()">Ulozit</button>
+    </div>
+  </div>
+
+  <div>
+    <h1 class="text-center">
+      Fotky
+      <button (click)="triggerPhotoInput()"><i class="pi pi-plus-circle" style="font-size: 1.5rem"></i></button>
+    </h1>
+
+    <input id="photo" style="display: none" #photoInput type="file" (change)="onPhotoSelected($event)" accept="image/*"/>
+
+    <div class="photos">
+      @for (photo of photos; track photo.id) {
+      <div class="photo-container">
+        <img [src]="photo.data" alt="">
+        <button class="delete-button" (click)="deletePhoto(photo.id)">
+          <i class="pi pi-trash" style="font-size: 1rem"></i>
+        </button>
+      </div>
+      }
+    </div>
+
+  </div>
+
+  <div class="mt-2">
+    <h1 class="text-center">
+      Dokumenty
+      <button (click)="triggerFileInput()"><i class="pi pi-plus-circle" style="font-size: 1.5rem"></i></button>
+    </h1>
+
+    <input type="file" style="display: none" #fileInput (change)="onFileSelected($event)">
+
+    <p-table [value]="documents" [tableStyle]="{ 'min-width': '50rem' }">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Meno</th>
+          <th>Akcie</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-document>
+        <tr>
+          <td>{{ document.name }}</td>
+          <td class="actions">
+            <button (click)="download(document)"><i class="pi pi-download" style="font-size: 1rem"></i></button>
+            <button (click)="delete(document.id)"><i class="pi pi-trash" style="font-size: 1rem"></i></button>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+    @if (selectedFileBase64) {
+    <div class="file-select">
+      <input class="input ml-1 mt-1" type="text" pInputText [(ngModel)]="fileName" placeholder="Nazov suboru"/>
+      <p-selectButton
+        [options]="stateLanguages"
+        [(ngModel)]="language"
+        optionLabel="label"
+        optionValue="value"
+        class="ml-1 mt-1"/>
+      <button class="button confirm-button ml-1 mt-1" (click)="uploadFile()">upload</button>
+    </div>
+    }
+  </div>
+</div>

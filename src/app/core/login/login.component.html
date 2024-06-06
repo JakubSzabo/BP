@@ -1,0 +1,11 @@
+<div>
+  <div class="container">
+    <div class="login-form">
+      <h1>Login</h1>
+      <input type="text" pInputText [(ngModel)]="userName" placeholder="Name"/>
+      <input type="password" pInputText [(ngModel)]="password" placeholder="Password"/>
+      <button class="button confirm-button" (click)="login()">Login</button>
+    </div>
+  </div>
+</div>
+<p-toast></p-toast>

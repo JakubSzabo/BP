@@ -1,0 +1,25 @@
+<div class="container">
+  <p-fileUpload
+    (onSelect)="onUpload($event)"
+    [multiple]="true"
+    accept="image/*">
+  </p-fileUpload>
+  <div class="mt-2">
+    <input class="input" type="text" pInputText [(ngModel)]="category" placeholder="Kategoria"/>
+    <button (click)="save()" class="button confirm-button">Uložiť</button>
+  </div>
+
+  @for(category of getCategories(); track category) {
+    <div>
+      <h1>{{ category }}</h1>
+      @for(photo of photosByCategory[category]; track photo.photoId) {
+        <div class="photo">
+          <img [src]="photo.data" alt="">
+          <button (click)="deletePhoto(photo.photoId)"><i class="pi pi-trash"></i></button>
+        </div>
+      }
+    </div>
+  } @empty {
+    <div class="text-center"><i class="pi pi-spin pi-spinner" style="font-size: 2rem"></i></div>
+  }
+</div>

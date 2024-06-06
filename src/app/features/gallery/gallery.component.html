@@ -1,0 +1,21 @@
+<div class="container">
+  @for (category of photosByCategory; track category) {
+    <div class="gallery-box">
+      <div class="gallery-header" (click)="toggleCategory(category)">
+        <h1>{{ category.name }}</h1>
+        <i [class]="category.expanded ? 'pi pi-angle-up' : 'pi pi-angle-down'"></i>
+      </div>
+      @if (category.expanded) {
+      <div [@slideToggle]>
+        @if (!category.loading && category.photos.length) {
+          <app-light-gallery [photos]="category.photos"></app-light-gallery>
+        } @else {
+          <div class="text-center"><i class="pi pi-spin pi-spinner" style="font-size: 2rem"></i></div>
+        }
+      </div>
+      }
+    </div>
+  } @empty {
+    <div class="empty"></div>
+  }
+</div>

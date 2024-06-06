@@ -1,0 +1,48 @@
+<div class="container">
+  <h1 class="text-center">
+    Kontakty
+    <button (click)="triggerContactInput()"><i class="pi pi-plus-circle" style="font-size: 1.5rem"></i></button>
+  </h1>
+
+  <input id="photo" style="display: none" #contactInput type="file" (change)="onContactSelected($event)" accept="image/*"/>
+
+  <p-table [value]="contacts" [tableStyle]="{ 'min-width': '50rem' }">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Meno</th>
+        <th>Logo</th>
+        <th>Kategoria</th>
+        <th>Link</th>
+        <th>Akcie</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-contact>
+      <tr>
+        <td>{{ contact.name }}</td>
+        <td><img class="logo" [src]="contact.logo" alt=""></td>
+        <td>{{ contact.category }}</td>
+        <td>
+          @if (contact.link) {
+            <a href="{{ contact.link }}"><i class="pi pi-link" style="font-size: 2rem"></i></a>
+          }
+        </td>
+        <td>
+          <button (click)="delete(contact.id)"><i class="pi pi-trash" style="font-size: 1rem"></i></button>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+  @if (selectedFileBase64) {
+    <div class="file-select">
+      <input class="input ml-1 mt-1" type="text" pInputText [(ngModel)]="fileName" placeholder="Nazov suboru"/>
+      <input class="input ml-1 mt-1" type="text" pInputText [(ngModel)]="link" placeholder="Link"/>
+      <p-selectButton
+        [options]="categories"
+        [(ngModel)]="selectedCategories"
+        optionLabel="label"
+        optionValue="value"
+        class="ml-1 mt-1"/>
+      <button class="button confirm-button ml-1 mt-1" (click)="uploadFile()">upload</button>
+    </div>
+  }
+</div>

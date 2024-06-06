@@ -1,0 +1,32 @@
+<div class="bg">
+  <div class="container sections">
+    <div class="sponsors section">
+      <h2>Sponzory</h2>
+      <div class="sponsor-two">
+        @for (logo of sponsors; track logo.id) {
+          <img src='{{ logo.logo }}'>
+        }
+      </div>
+    </div>
+    <div class="sponsors section">
+      <h2>Kontakty</h2>
+      <div class="sponsor sponsor-main">
+        @for (link of mainContacts; track link.id) {
+          <a href='{{link.link}}' >
+            <img src='{{ link.logo }}'>
+          </a>
+        }
+      </div>
+    </div>
+    <div class="sponsors section">
+      <h2>Iné</h2>
+      <div class="sponsor">
+        @for (link of otherContacts; track link.id) {
+          <a href='{{link.link}}'>
+            <img src='{{ link.logo }}'>
+          </a>
+        }
+      </div>
+    </div>
+  </div>
+</div>

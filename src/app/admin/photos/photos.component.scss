@@ -1,0 +1,29 @@
+.photo {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+
+  img {
+    height: 200px;
+  }
+
+  button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+
+    i {
+      color: red;
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, 1);
+    }
+  }
+}

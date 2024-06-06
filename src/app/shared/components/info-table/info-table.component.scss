@@ -1,0 +1,45 @@
+.info-table {
+  width: 300px;
+  height: 350px;
+  background-color: #e5e5e5;
+  padding: 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+
+  .info-text {
+    text-align: left;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow: hidden;
+    height: 100px;
+  }
+
+  &.expanded {
+    height: auto;
+    width: 932px;
+
+    .info-text {
+      height: auto;
+    }
+  }
+
+  img {
+    max-width: 300px;
+    height: auto;
+  }
+}
+
+.info-table p {
+  margin-top: 5px;
+}
+
+@media (max-width: 932px) {
+  .info-table {
+    &.expanded {
+      width: 100vw;
+    }
+  }
+}

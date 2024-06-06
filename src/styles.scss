@@ -1,0 +1,99 @@
+@import "primeicons/primeicons.css";
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+
+//@font-face {
+//  font-family: 'Langar';
+//  src: url('/assets/fonts/Langar.ttf') format('truetype');
+//  font-weight: normal;
+//  font-style: normal;
+//}
+
+*, body {
+  margin: 0;
+  font-family: Langar, sans-serif;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.container {
+  width: 1300px;
+  margin: auto;
+}
+
+@media (max-width: 1300px) {
+  .container {
+    width: 100%;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.pt-1 {
+  padding-top: .5rem;
+}
+
+.ml-1 {
+  margin-left: .5rem
+}
+
+.mt-1 {
+  margin-top: .5rem
+}
+
+.mt-2 {
+  margin-top: 1rem
+}
+
+.p-relative {
+  position: relative;
+}
+
+.p-absolute {
+  position: absolute;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  padding: 0.2rem;
+}
+
+.button {
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+}
+
+.button.confirm-button {
+  background-color: #28af28;
+  color: white;
+}
+
+.button.normal-button {
+  color: black;
+  background-color: #d9d9d9;
+}
+
+.button.danger-button {
+  background-color: #d32424;
+  color: white;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-end {
+  justify-content: end;
+}
+
+.p-checkbox-label {
+  padding: 10px;
+}

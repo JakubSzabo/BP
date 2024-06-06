@@ -1,0 +1,12 @@
+<div
+  class="info-table"
+  [ngClass]="{'expanded': open}"
+>
+  <img src="{{ image }}" alt="image">
+  <h2>{{ title }}</h2>
+  <div
+    class="info-text"
+    [innerHTML]="getSafeHtml(text)"
+  >
+  </div>
+</div>
