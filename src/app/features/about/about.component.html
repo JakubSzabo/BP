@@ -13,7 +13,7 @@
     </div>
     @if (data?.map) {
       <div class="map">
-        <h3 class="text-center title-about">Mapa internátu</h3>
+        <h3 class="text-center title-about">{{ 'map' | translate }}</h3>
         <img [src]="data?.map" alt="map">
       </div>
     } @else {
@@ -21,13 +21,13 @@
     }
   </div>
   <div class="documents">
-    <h3 class="text-center title-about">Dokumenty k ubytovaniu</h3>
+    <h3 class="text-center title-about">{{ 'documents' | translate }}</h3>
     @if (documents != []) {
     <p-table [value]="documents">
       <ng-template pTemplate="header">
         <tr>
-          <th>Nazov</th>
-          <th>Stiahnuť</th>
+          <th>{{ 'title' | translate }}</th>
+          <th>{{ 'download' | translate }}</th>
         </tr>
       </ng-template>
       <ng-template pTemplate="body" let-document>

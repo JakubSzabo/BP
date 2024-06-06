@@ -6,6 +6,7 @@ import {EditorModule} from "primeng/editor";
 import {TableModule} from "primeng/table";
 import {SelectButtonModule} from "primeng/selectbutton";
 import {AboutService} from "./about.service";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-about',
@@ -17,6 +18,7 @@ import {AboutService} from "./about.service";
     EditorModule,
     TableModule,
     SelectButtonModule,
+    TranslateModule,
   ],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss'

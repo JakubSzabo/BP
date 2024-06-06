@@ -1,7 +1,7 @@
 <div class="container">
   <div>
     <h1 class="text-center pt-1">
-      Články
+      {{ 'forms' | translate }}
       <button [routerLink]="'/admin/create-form'"><i class="pi pi-plus-circle" style="font-size: 1.5rem"></i></button>
     </h1>
 
@@ -10,8 +10,8 @@
         <ng-template pTemplate="header">
           <tr>
             <th>ID</th>
-            <th>Datum konca</th>
-            <th>Action</th>
+            <th>{{ 'endDate' | translate }}</th>
+            <th>{{ 'action' | translate }}</th>
           </tr>
         </ng-template>
         <ng-template pTemplate="body" let-item>

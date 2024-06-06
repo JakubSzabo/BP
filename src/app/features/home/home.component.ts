@@ -2,12 +2,14 @@ import {Component, OnInit} from '@angular/core';
 import { InfoTableComponent } from "../../shared/components/info-table/info-table.component";
 import {HomeService} from "./home.service";
 import {Article, ArticleTab} from "../../shared/models/article";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
-    InfoTableComponent
+    InfoTableComponent,
+    TranslateModule
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

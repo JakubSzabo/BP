@@ -17,31 +17,31 @@ import {TopNavComponent} from "../../core/top-nav/top-nav.component";
 export class AdminLayoutComponent {
   links = [
     {
-      label: 'Zapisnice',
+      label: 'minutes',
       link: '/admin',
     },
     {
-      label: 'Články',
+      label: 'articles',
       link: '/admin/articles',
     },
     {
-      label: 'Fotky',
+      label: 'photos',
       link: '/admin/photos',
     },
     {
-      label: 'O internate',
+      label: 'about',
       link: '/admin/about'
     },
     {
-      label: 'Formuláre',
+      label: 'forms',
       link: '/admin/forms'
     },
     {
-      label: 'Nastavenia',
+      label: 'settings',
       link: '/admin/settings',
     },
     {
-      label: 'Kontakty',
+      label: 'contacts',
       link: '/admin/contacts',
     },
   ];

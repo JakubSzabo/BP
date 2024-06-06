@@ -5,13 +5,15 @@ import {LocalStorageService} from "../../shared/services/local-storage.service";
 import { Router } from '@angular/router';
 import {ToastModule} from "primeng/toast";
 import {MessageService} from "primeng/api";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-login',
   standalone: true,
   imports: [
     FormsModule,
-    ToastModule
+    ToastModule,
+    TranslateModule
   ],
   providers: [
     MessageService

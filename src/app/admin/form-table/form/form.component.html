@@ -1,16 +1,16 @@
 <div class="container form">
   <div>
-    <label>Max počet odpovedí:</label>
+    <label>{{ 'max' | translate }}</label>
     <input [(ngModel)]="max" type="number">
   </div>
   <div>
-    <label>Uzatvorenie formulára:</label>
+    <label>{{ 'endDateForm' | translate }}</label>
     <input [(ngModel)]="date" type="date">
   </div>
   @for (field of form; track field) {
   <div>
       <div>
-        <label>Typ poľa:</label>
+        <label>{{ 'input' | translate }}</label>
         <select [(ngModel)]="field.fieldType">
           <option value="input">Input</option>
           <option value="checkbox">Checkbox</option>
@@ -19,7 +19,7 @@
       </div>
       @if (field.fieldType === 'input') {
         <div>
-          <label>Typ vstupu:</label>
+          <label>{{ 'inputType' | translate }}</label>
           <select [(ngModel)]="field.inputType">
             <option value="text">Text</option>
             <option value="number">Number</option>
@@ -28,16 +28,16 @@
         </div>
       }
       <div>
-        <label>Názov štítku:</label>
+        <label>{{ 'label' | translate }}</label>
         <input [(ngModel)]="field.fieldName" type="text">
       </div>
       <div>
-        <label>Povinné:</label>
+        <label>{{ 'required' | translate }}</label>
         <input [(ngModel)]="field.requiredField" type="checkbox">
       </div>
-      <button class="button danger-button" type="button" (click)="deleteField($index)">Delete</button>
+      <button class="button danger-button" type="button" (click)="deleteField($index)">{{ 'delete' | translate }}</button>
   </div>
   }
-  <button class="button normal-button" type="button" (click)="addField()">Add Input</button>
-  <button class="button confirm-button" (click)="saveForm()">Save</button>
+  <button class="button normal-button" type="button" (click)="addField()">{{ 'add' | translate }}</button>
+  <button class="button confirm-button" (click)="saveForm()">{{ 'save' | translate }}</button>
 </div>

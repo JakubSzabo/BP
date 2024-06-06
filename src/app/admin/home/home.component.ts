@@ -4,6 +4,7 @@ import {CommonModule} from "@angular/common";
 import {RouterLink} from "@angular/router";
 import {HomeService} from "./home.service";
 import {Script} from "../../shared/models/script";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-home',
@@ -12,6 +13,7 @@ import {Script} from "../../shared/models/script";
     TableModule,
     CommonModule,
     RouterLink,
+    TranslateModule,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

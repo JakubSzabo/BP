@@ -8,18 +8,20 @@ import {EditorModule} from "primeng/editor";
 import {ChipsModule} from "primeng/chips";
 import {HomeService} from "../home.service";
 import {NgxSimpleTextEditorModule} from "ngx-simple-text-editor";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-add-script',
   standalone: true,
-    imports: [
-        CalendarModule,
-        FormsModule,
-        CheckboxModule,
-        EditorModule,
-        ChipsModule,
-        NgxSimpleTextEditorModule
-    ],
+  imports: [
+    CalendarModule,
+    FormsModule,
+    CheckboxModule,
+    EditorModule,
+    ChipsModule,
+    NgxSimpleTextEditorModule,
+    TranslateModule
+  ],
   templateUrl: './add-script.component.html',
   styleUrl: './add-script.component.scss'
 })

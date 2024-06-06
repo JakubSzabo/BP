@@ -3,6 +3,7 @@ import {FileUploadModule} from "primeng/fileupload";
 import {InputTextModule} from "primeng/inputtext";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {PhotosService} from "./photos.service";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-photos',
@@ -11,7 +12,8 @@ import {PhotosService} from "./photos.service";
     FileUploadModule,
     InputTextModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    TranslateModule
   ],
   templateUrl: './photos.component.html',
   styleUrl: './photos.component.scss'

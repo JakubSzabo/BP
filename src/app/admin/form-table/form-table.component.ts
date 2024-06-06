@@ -4,6 +4,7 @@ import {TableModule} from "primeng/table";
 import {RouterLink} from "@angular/router";
 import {FormService} from "./form/form.service";
 import {DatePipe} from "@angular/common";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-form-table',
@@ -12,7 +13,8 @@ import {DatePipe} from "@angular/common";
     SharedModule,
     TableModule,
     RouterLink,
-    DatePipe
+    DatePipe,
+    TranslateModule
   ],
   templateUrl: './form-table.component.html',
   styleUrl: './form-table.component.scss'

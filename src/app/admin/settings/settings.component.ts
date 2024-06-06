@@ -10,6 +10,7 @@ import {SettingService} from "./setting.service";
 import {ToastModule} from "primeng/toast";
 import {DropdownModule} from "primeng/dropdown";
 import {AboutService} from "../articles/about.service";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-settings',
@@ -22,7 +23,8 @@ import {AboutService} from "../articles/about.service";
     FormsModule,
     InputTextModule,
     ToastModule,
-    DropdownModule
+    DropdownModule,
+    TranslateModule
   ],
   providers: [MessageService],
   templateUrl: './settings.component.html',

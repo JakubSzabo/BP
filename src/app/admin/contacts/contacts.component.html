@@ -1,6 +1,6 @@
 <div class="container">
   <h1 class="text-center">
-    Kontakty
+    {{ 'contacts' | translate }}
     <button (click)="triggerContactInput()"><i class="pi pi-plus-circle" style="font-size: 1.5rem"></i></button>
   </h1>
 
@@ -9,11 +9,11 @@
   <p-table [value]="contacts" [tableStyle]="{ 'min-width': '50rem' }">
     <ng-template pTemplate="header">
       <tr>
-        <th>Meno</th>
-        <th>Logo</th>
-        <th>Kategoria</th>
-        <th>Link</th>
-        <th>Akcie</th>
+        <th>{{ 'name' | translate }}</th>
+        <th>{{ 'logo' | translate }}</th>
+        <th>{{ 'category' | translate }}</th>
+        <th>{{ 'link' | translate }}</th>
+        <th>{{ 'action' | translate }}</th>
       </tr>
     </ng-template>
     <ng-template pTemplate="body" let-contact>

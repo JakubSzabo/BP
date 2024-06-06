@@ -4,6 +4,7 @@ import {InputTextModule} from "primeng/inputtext";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {SelectButtonModule} from "primeng/selectbutton";
 import {ContactsService} from "./contacts.service";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-contacts',
@@ -13,7 +14,8 @@ import {ContactsService} from "./contacts.service";
     InputTextModule,
     ReactiveFormsModule,
     SelectButtonModule,
-    FormsModule
+    FormsModule,
+    TranslateModule
   ],
   templateUrl: './contacts.component.html',
   styleUrl: './contacts.component.scss'

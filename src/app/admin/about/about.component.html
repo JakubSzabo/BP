@@ -1,5 +1,5 @@
 <div class="container">
-  <h1 class="text-center pt-1">O internáte</h1>
+  <h1 class="text-center pt-1">{{ 'about' | translate }}</h1>
   <div>
     <input class="input" type="text" pInputText [(ngModel)]="title" placeholder="Nadpis"/>
 
@@ -8,18 +8,18 @@
     </div>
 
     <div class="map">
-      <label for="map">Mapa: </label>
+      <label for="map">{{ 'map' | translate }}: </label>
       <input id="map" type="file" (change)="onMapSelected($event)" accept="image/*"/>
     </div>
 
     <div class="save">
-      <button class="button confirm-button" (click)="saveAbout()">Ulozit</button>
+      <button class="button confirm-button" (click)="saveAbout()">{{ 'save' | translate }}</button>
     </div>
   </div>
 
   <div>
     <h1 class="text-center">
-      Fotky
+      {{ 'photos' | translate }}
       <button (click)="triggerPhotoInput()"><i class="pi pi-plus-circle" style="font-size: 1.5rem"></i></button>
     </h1>
 
@@ -40,7 +40,7 @@
 
   <div class="mt-2">
     <h1 class="text-center">
-      Dokumenty
+      {{ 'documents' | translate }}
       <button (click)="triggerFileInput()"><i class="pi pi-plus-circle" style="font-size: 1.5rem"></i></button>
     </h1>
 
@@ -49,8 +49,8 @@
     <p-table [value]="documents" [tableStyle]="{ 'min-width': '50rem' }">
       <ng-template pTemplate="header">
         <tr>
-          <th>Meno</th>
-          <th>Akcie</th>
+          <th>{{ 'name' | translate }}</th>
+          <th>{{ 'action' | translate }}</th>
         </tr>
       </ng-template>
       <ng-template pTemplate="body" let-document>
@@ -72,7 +72,7 @@
         optionLabel="label"
         optionValue="value"
         class="ml-1 mt-1"/>
-      <button class="button confirm-button ml-1 mt-1" (click)="uploadFile()">upload</button>
+      <button class="button confirm-button ml-1 mt-1" (click)="uploadFile()">{{ 'save' | translate }}</button>
     </div>
     }
   </div>

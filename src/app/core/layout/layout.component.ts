@@ -17,23 +17,23 @@ import { RouterOutlet } from "@angular/router";
 export class LayoutComponent {
   links = [
     {
-      label: 'Domov',
+      label: 'home',
       link: '/',
     },
     {
-      label: 'O internáte',
+      label: 'about',
       link: '/about',
     },
     {
-      label: 'Galéria',
+      label: 'gallery',
       link: '/gallery',
     },
     {
-      label: 'Príspevky',
+      label: 'articles',
       link: '/events',
     },
     {
-      label: 'Login',
+      label: 'login',
       link: '/login',
     },
   ];

@@ -8,6 +8,7 @@ import { BeforeSlideDetail } from "lightgallery/lg-events";
 import { LightgalleryModule } from "lightgallery/angular";
 import { isPlatformBrowser } from "@angular/common";
 import {LightGalleryComponent} from "../../shared/components/light-gallery/light-gallery.component";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-about',
@@ -16,7 +17,8 @@ import {LightGalleryComponent} from "../../shared/components/light-gallery/light
     SharedModule,
     TableModule,
     LightgalleryModule,
-    LightGalleryComponent
+    LightGalleryComponent,
+    TranslateModule
   ],
   encapsulation: ViewEncapsulation.None,
   templateUrl: './about.component.html',

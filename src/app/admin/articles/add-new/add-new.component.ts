@@ -6,17 +6,19 @@ import {MessageService} from "primeng/api";
 import {ToastModule} from "primeng/toast";
 import {ArticlesService} from "../articles.service";
 import {NgxSimpleTextEditorModule} from "ngx-simple-text-editor";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-add-new',
   standalone: true,
-    imports: [
-        FormsModule,
-        ChipsModule,
-        EditorModule,
-        ToastModule,
-        NgxSimpleTextEditorModule
-    ],
+  imports: [
+    FormsModule,
+    ChipsModule,
+    EditorModule,
+    ToastModule,
+    NgxSimpleTextEditorModule,
+    TranslateModule
+  ],
   providers: [MessageService],
   templateUrl: './add-new.component.html',
   styleUrl: './add-new.component.scss'

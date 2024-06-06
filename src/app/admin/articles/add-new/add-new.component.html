@@ -4,7 +4,7 @@
     <st-editor [(ngModel)]="text"></st-editor>
   </div>
   <div class="d-flex justify-content-end">
-    <button (click)="saveData()" class="button confirm-button">Uložiť</button>
+    <button (click)="saveData()" class="button confirm-button">{{ 'save' | translate }}</button>
   </div>
 </div>
 <p-toast></p-toast>

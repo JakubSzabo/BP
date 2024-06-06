@@ -1,6 +1,6 @@
 <div class="container">
   <h1 class="text-center pt-1">
-    Zápisnice
+    {{ 'minutes' | translate }}
     <button [routerLink]="'addNew'"><i class="pi pi-plus-circle" style="font-size: 1.5rem"></i></button>
   </h1>
 
@@ -8,9 +8,9 @@
     <p-table [value]="data" [tableStyle]="{ 'min-width': '50rem' }">
       <ng-template pTemplate="header">
         <tr>
-          <th>Datum</th>
-          <th>Meno</th>
-          <th>Action</th>
+          <th>{{ 'date' | translate }}</th>
+          <th>{{ 'name' | translate }}</th>
+          <th>{{ 'action' | translate }}</th>
         </tr>
       </ng-template>
       <ng-template pTemplate="body" let-item>

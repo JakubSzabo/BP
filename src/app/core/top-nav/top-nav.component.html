@@ -8,16 +8,22 @@
       </ul>
     </p-sidebar>
   </div>
-
   <ul class="nav-bar">
     <div class="nav-logo">
       <img src="./assets/images/rus_logo.svg" alt="">
     </div>
     <div class="nav-items">
       @for (link of links; track link.link) {
-        <li class="nav-item"><a [routerLink]="link.link">{{ link.label }}</a></li>
+        <li class="nav-item"><a [routerLink]="link.link">{{ link.label | translate }}</a></li>
       }
-      <li class="nav-item">jazyk</li>
+      <li class="nav-item">
+        <p-dropdown
+          [options]="countries"
+          [(ngModel)]="selectedCountry"
+          (ngModelChange)="changeLanguage()"
+          optionLabel="name"
+        ></p-dropdown>
+      </li>
     </div>
     <p-button (click)="sidebarVisible = true" class="nav-burger"><i class="pi pi-align-justify"></i></p-button>
   </ul>

@@ -5,6 +5,7 @@ import { Article } from "../../shared/models/article";
 import { ArticlesService } from "./articles.service";
 import { FormsModule } from "@angular/forms";
 import {AboutService} from "./about.service";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-articles',
@@ -13,6 +14,7 @@ import {AboutService} from "./about.service";
     RouterLink,
     TableModule,
     FormsModule,
+    TranslateModule,
   ],
   templateUrl: './articles.component.html',
   styleUrls: ['./articles.component.scss']

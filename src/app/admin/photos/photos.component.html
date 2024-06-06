@@ -6,7 +6,7 @@
   </p-fileUpload>
   <div class="mt-2">
     <input class="input" type="text" pInputText [(ngModel)]="category" placeholder="Kategoria"/>
-    <button (click)="save()" class="button confirm-button">Uložiť</button>
+    <button (click)="save()" class="button confirm-button">{{ 'save' | translate }}</button>
   </div>
 
   @for(category of getCategories(); track category) {

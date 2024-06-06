@@ -13,6 +13,7 @@ import {MessageService} from "primeng/api";
 import {
   NgxSimpleTextEditorModule,
 } from "ngx-simple-text-editor";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-edit-script',
@@ -25,7 +26,8 @@ import {
     InputTextModule,
     ReactiveFormsModule,
     FormsModule,
-    ToastModule
+    ToastModule,
+    TranslateModule
   ],
   providers: [
     MessageService

@@ -1,10 +1,13 @@
 import {Component, input, OnInit} from '@angular/core';
 import {FooterService} from "./footer.service";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [],
+  imports: [
+    TranslateModule
+  ],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })

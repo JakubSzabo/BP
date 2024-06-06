@@ -1,7 +1,7 @@
 <div class="bg">
   <div class="container sections">
     <div class="sponsors section">
-      <h2>Sponzory</h2>
+      <h2>{{ 'sponsors' | translate }}</h2>
       <div class="sponsor-two">
         @for (logo of sponsors; track logo.id) {
           <img src='{{ logo.logo }}'>
@@ -9,7 +9,7 @@
       </div>
     </div>
     <div class="sponsors section">
-      <h2>Kontakty</h2>
+      <h2>{{ 'contacts' | translate }}</h2>
       <div class="sponsor sponsor-main">
         @for (link of mainContacts; track link.id) {
           <a href='{{link.link}}' >
@@ -19,7 +19,7 @@
       </div>
     </div>
     <div class="sponsors section">
-      <h2>Iné</h2>
+      <h2>{{ 'other' | translate }}</h2>
       <div class="sponsor">
         @for (link of otherContacts; track link.id) {
           <a href='{{link.link}}'>

@@ -7,17 +7,19 @@ import {ToastModule} from "primeng/toast";
 import {MessageService} from "primeng/api";
 import {ArticlesService} from "../articles.service";
 import {NgxSimpleTextEditorModule} from "ngx-simple-text-editor";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-edit',
   standalone: true,
-    imports: [
-        EditorModule,
-        InputTextModule,
-        PaginatorModule,
-        ToastModule,
-        NgxSimpleTextEditorModule
-    ],
+  imports: [
+    EditorModule,
+    InputTextModule,
+    PaginatorModule,
+    ToastModule,
+    NgxSimpleTextEditorModule,
+    TranslateModule
+  ],
   providers: [MessageService],
   templateUrl: './edit.component.html',
   styleUrl: './edit.component.scss'
