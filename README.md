@@ -1,28 +1,23 @@
-# RusWebFe
+# Toto je BE pre Web RUŠ SD mladsot. 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.2.
+Pre prvé spustenie na novom zariadení je potrebné si ako prvé nainštalovať Node.js a Angular CLI podľa toho či používame Windows, MacOS alebo Linux sa nám otvára viac variant nainštalovania:
 
-## Development server
+Windows:
+Ako prvé je potrebné si stiahnuť inštalačný balík Node.js z oficiálnej stránky
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+MasOS: 
+Pre inštaláciu na MacOS by som odporučil použiť HomeBrew pre jeho inštaláciu stačí do terminálu zadať nasledujúci prílaz:
+§ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew /install/HEAD/install.sh)"
+Potom Node.js vieme jednoducho nainštalovať pomocou príkazu § brew install node
 
-## Code scaffolding
+Linux:
+Pre linux je riešenie veľmi jednoduché a priame, stačí spustiť príkaz: § sudo apt install nodejs npm
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Ďalej nainštalujeme Angular CLI, tento nástroj nám uľahčí vytváranie a spúštanie Angular aplikácie. Ak už máme úspešne nainštalovaný Node.js tak inštalácia Angular CLI môžme spraviť jednoducho cez príkazový riadok globálne do celého systému príkazom:
+§ npm install -g @angular/cli
 
-## Build
+potom stačí nainštalovať potrebné knižnice použité v kode pomocou:
+npm install
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# BP
+a spustit projekt pomocou: 
+ng serve
