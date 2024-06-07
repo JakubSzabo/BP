@@ -1,4 +1,4 @@
-# Toto je BE pre Web RUŠ SD mladsot. 
+# Toto je FE pre Web RUŠ ŠD mladsot. 
 
 Pre prvé spustenie na novom zariadení je potrebné si ako prvé nainštalovať Node.js a Angular CLI podľa toho či používame Windows, MacOS alebo Linux sa nám otvára viac variant nainštalovania:
 
